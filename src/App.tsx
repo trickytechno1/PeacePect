@@ -319,22 +319,14 @@ const DonationForm = () => {
     setLoading(true);
     setSuccess(null);
 
-    try {
-      const response = await fetch('/api/donate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      const data = await response.json();
-      if (data.success) {
-        setSuccess(data.message);
-        setFormData({ name: '', phone: '', email: '', amount: '', cause: 'Education Support' });
-      }
-    } catch (err) {
-      console.error(err);
-    } finally {
+    // Simulate a local "API" call for static hosting compatibility
+    console.log(`Donation received locally:`, formData);
+    
+    setTimeout(() => {
+      setSuccess("Thank you for your generous contribution to Peace Pect. Your donation helps us make a difference.");
+      setFormData({ name: '', phone: '', email: '', amount: '', cause: 'Education Support' });
       setLoading(false);
-    }
+    }, 1500);
   };
 
   return (
