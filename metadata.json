@@ -1,6 +1,0 @@
-{
-  "name": "Peace Pect",
-  "description": "A clean, modern charity donation platform for transparent and impactful giving.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
